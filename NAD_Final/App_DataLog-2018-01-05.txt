@@ -1,0 +1,148 @@
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:08:16
+Page: MainPage
+Event: Failed Login - Incorrect Password
+Status: Audit
+Time: 2018-01-05 14:33:59
+Page: LoginPage
+Event: Failed Login - Incorrect Password
+Status: Audit
+Time: 2018-01-05 14:34:21
+Page: LoginPage
+Event: Basic User Identity Verified
+Status: Audit
+Time: 2018-01-05 14:34:29
+Page: LoginPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:34:29
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:34:37
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:34:37
+Page: PostTextbooks
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:35:07
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:35:10
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:35:10
+Page: PostTextbooks
+Event: Delete Post Success
+Status: Audit
+Time: 2018-01-05 14:36:32
+Page: PostTextbooks
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:36:49
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:36:51
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:36:51
+Page: PostTextbooks
+Event: Delete Post Success
+Status: Audit
+Time: 2018-01-05 14:41:20
+Page: PostTextbooks
+Event: Delete Post Success
+Status: Audit
+Time: 2018-01-05 14:42:19
+Page: PostTextbooks
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:43:15
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:43:23
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:43:32
+Page: MainPage
+Event: Request Authenticated
+Status: Audit
+Time: 2018-01-05 14:43:32
+Page: BrowsePage
+Event: Request Authenticated
+Status: Audit
+Time: 2018-01-05 14:43:34
+Page: BrowsePage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:43:34
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:43:35
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:43:35
+Page: PostTextbooks
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:46:37
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:46:48
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 14:46:48
+Page: PostTextbooks
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 15:20:07
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 15:20:08
+Page: MainPage
+Event: Request Authenticated
+Status: Audit
+Time: 2018-01-05 15:20:09
+Page: BrowsePage
+Event: Request Authenticated
+Status: Audit
+Time: 2018-01-05 15:20:10
+Page: BrowsePage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 15:20:10
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 15:20:11
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 15:20:11
+Page: PostTextbooks
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 15:30:31
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 15:30:33
+Page: MainPage
+Event: User Authenticated
+Status: Audit
+Time: 2018-01-05 15:30:33
+Page: PostTextbooks

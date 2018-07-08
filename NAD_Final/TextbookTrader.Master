@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TextbookTrader.master.cs" Inherits="NAD_Final.TextbookTrader" %>
+
+<%--
+/*
+* FILE : ViewPost.aspx
+* PROJECT : NAD - Project proof of concept
+* PROGRAMMER : Arindm Sharm, Jody Markic, Zivojin Pecin,Sean Moulton
+* FIRST VERSION : 2017-11-8
+* DESCRIPTION :
+* This file is interface for the user to be able to see the post created by other users.
+*/
+--%>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Textbook Trader</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/myCustom.css">
+    <link rel="stylesheet" href="Content/BrowseStyleSheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <asp:contentplaceholder id="HeadContent"
+                 runat="server">
+                  <!-- Page-specific content will go here... -->
+    </asp:contentplaceholder>
+</head>
+<body>
+  <div id="wrap">
+    <form id="form1" runat="server">
+        <div><%-- BEGIN OF OUT-MOST DIV --%>
+
+          <%-- HEADER --%>
+          <div class="jumbotron">
+              <div class="flex-column"> <!-- begin of flex-colum -->
+                  <div class="flexBox-stretch"><!-- jumbotron main content -->
+                      <div><!-- start homepage picture -->
+                       <%-- <div style="flex-grow:1">--%>
+                            <asp:ImageButton class ="LogoImage" ID="ImageButton1" src="Images/ourLogo.jpg" runat="server" OnClick="Logo_Click"/>
+                       <%-- </div>--%>
+                      </div> <!--end of homepage picture -->
+                      <div class="pagetitle text-center"><!--start of title -->
+
+                        <%--<div style="flex-grow:8" class ="mainaligncentrediv">--%>
+                        <%-- <div class="text-nowrap">--%>
+                        <asp:contentplaceholder id="TitleContent" runat="server">
+
+                            <!-- Title's go here! -->
+                        </asp:contentplaceholder>
+
+                        <%--</div>--%>
+                        <%--</div>--%>
+                      </div><!-- end of title -->
+
+                  </div> <!-- Title -->
+                  <div class="flexBox-jumbo-footer"><!-- jumbotron footer -->
+                      <div class="text-left" style="flex-grow: 1; margin-top: 12%; margin-left: 6%;"> <!-- admin stuff -->
+
+                       <%-- <asp:Button class="btn btn-info tahoma" ID="Button14" runat="server" Text="Administration" Visible="false" OnClick="Admin_Click"/>--%>
+                        <asp:contentplaceholder id="AdminButton"
+                            runat="server">
+                            <!-- Page-specific content will go here... -->
+                        </asp:contentplaceholder>                   
+                      </div><!-- end admin stuff -->
+                      <div class="text-right" style="flex-grow: 1"><!-- login stuff-->
+                        <div class="Logins">
+                            <div class="row">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                    <asp:LoginView ID="LoginView2" runat="server">
+                                        <LoggedInTemplate>
+                                            <p class="tahoma">Welcome back, <asp:LoginName ID="LoginName1" runat="server"/> <asp:LoginStatus class ="tahoma btn btn-info rightmarginlogin" ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/LoginPage.aspx" /></p>
+                                            <br />
+                                        </LoggedInTemplate>
+                                        <AnonymousTemplate>
+                                            <p class="tahoma">Hello, stranger <asp:Button  class ="btn btn-info tahoma rightmarginlogin" ID="lnkLogin" runat="server" OnClick="Logic_Click" Text="Log In" /></p>
+                                
+                                
+                                        </AnonymousTemplate>
+                                    </asp:LoginView>
+                                    <br />           
+                             <br /><br />
+                            </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                      </div><!--end login stuff-->
+                  </div><!-- end of jumbotron footer -->
+              </div><!-- end of jumbotron -->
+
+<%--
+
+
+            <div class="flexBox2">
+                <div style="flex-grow:1">
+                    <asp:ImageButton class ="LogoImage" ID="ImageButton2" src="Images/ourLogo.jpg" runat="server" OnClick="Logo_Click"/>
+                </div>
+                <div style="flex-grow:8" class ="mainaligncentrediv">
+                   <%-- <div class="text-nowrap">--%>
+                       <%-- <asp:contentplaceholder id="TitleContent" runat="server">--%>
+
+                            <!-- Title's go here! -->
+                       <%-- </asp:contentplaceholder>--%>
+                    <%--</div>--%>
+               <%-- </div>
+                <div style="flex-grow:1">
+                    <asp:ImageButton class ="LogoImage" ID="ImageButton3" Visibile = "False" src="" runat="server" />
+                </div>
+            </div>
+            <div class="Logins">
+                <div class="text-left"><asp:HyperLink runat="server">Fuck You</asp:HyperLink></div>
+                <div class="row">
+                    <asp:ContentPlaceHolder ID="LoginContent" runat="server">
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <LoggedInTemplate>
+                                <p class="tahoma">Welcome back, <asp:LoginName ID="LoginName1" runat="server"/> <asp:LoginStatus class ="tahoma btn btn-info rightmarginlogin" ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/LoginPage.aspx" /></p>
+                                <br />
+                            </LoggedInTemplate>
+                            <AnonymousTemplate>
+                                <p class="tahoma">Hello, stranger <asp:Button  class ="btn btn-info tahoma rightmarginlogin" ID="lnkLogin" runat="server" OnClick="Logic_Click" Text="Log In" /></p>
+                                
+                                
+                            </AnonymousTemplate>
+                        </asp:LoginView>
+                        <br />           
+                 <br /><br />
+                </asp:ContentPlaceHolder>
+                </div>
+            </div>--%>
+          </div>
+
+
+          <%-- BODY --%>       
+        <div class="page_content">
+            <asp:contentplaceholder id="MainContent"
+                runat="server">
+                <!-- Page-specific content will go here... -->
+            </asp:contentplaceholder>
+        </div>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+              <%--<div id="push"></div>--%>
+            
+          <%-- FOOTER --%>
+        <div class="new_footer">
+            <div class="container text-center">
+            </br>
+            <div class="row">
+            <div class="col-sm-4">
+                <asp:HyperLink ID="ContactUsLink" runat="server">Contact Us</asp:HyperLink>
+            </div>
+            <div class="col-sm-4">
+                <asp:HyperLink ID="TermsOfUseLink" runat="server">Terms Of Use</asp:HyperLink>
+            </div>
+            <div class="col-sm-4">
+                <asp:HyperLink ID="PrivacyLink" runat="server">Privacy Policy</asp:HyperLink>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+        </div> <%-- END OF OUT-MOST DIV --%>
+      </div>
+    </form>
+</body>
+</html>

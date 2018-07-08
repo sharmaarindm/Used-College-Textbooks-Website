@@ -1,20 +1,186 @@
 ﻿html, body, form-horizontal {
-    height: 100%
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.jumbotron text-center {
-    width: 500px;
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    position: relative;
+    /*height: auto !important;
+    height: 100%;*/
+    /* Negative indent footer by it's height */
+    /*margin: 0 auto -60px;*/
+}
+
+/* #push {
+   height: 60px;
+ }*/
+
+
+.searchButtonBrowse {
+    margin-left: 10px;
+}
+
+#image-data {
+    margin-left:10px;
+    margin-right:10px;
+    padding :10px;
+}
+
+.nav-buttons {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.center_content {
+    text-align:center;
+    justify-content: center;
+}
+
+.align-data-buttons {
+
+    display:flex;
+    margin:20px;
+    padding:20px;
+}
+
+.scroll-bar {
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+.result-scroll-bar {
+    height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 2%;
+}
+
+.result-scroll-bar2 {
+    height: 400px;
+    overflow: scroll;
+    /*overflow-x: hidden;*/
+}
+.color {
+    margin-left:2%;
+}
+
+.result-table-browse {
+    height: 400px;
+}
+
+.result-table-post {
+    /*height: 200px;*/
+}
+
+
+.align-data {
+    /*float:none;
+    position: relative;
+    text-align:left;
+    margin-left:20px;
+    margin-right:20px;
+    padding-bottom: 10px;
+    padding-top:10px;
+    padding-left:20px;
+    padding-right 20px*/
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.align-data-expire {
+    padding-top: 13px;
+    margin-left:20px;
+    padding-left:20px;
+    /*float:none;
+    position: relative;
+    height: -20px;
+    text-align:left;
+    margin-top: 7px;
+    margin-left:20px;
+    margin-right:20px;
+    padding-bottom: 10px;
+    padding-top:15px;
+    padding-left:20px;
+    padding-right 20px;*/
+}
+
+page_content {
+    margin-bottom: 4%;
+}
+
+.ListViewButton {
+    font-size: large;
+}
+
+.new_footer {
+    height: 60px;
+    background-color: lightgray;
+    /*bottom: 0px;*/
+    /*float:left;
+    width:100%;*/
+    /*position:absolute;*/
+    /*width: 100%;*/
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px
+}
+
+.resultValues {
+    margin: 10px;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: lightgray;
+    height: 320px;
+}
+
+.center_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flexBox-stretch {
+    display: flex;
+    align-items: stretch;
+}
+
+
+
+.pagetitle {
+    /*justify-content: center;*/
+    text-align:center;
+    flex-grow:1;
+    margin-top: 20%;
+    margin-right: 15%;
+    /*margin-right: 5%;*/
+}
+
+
+.jumbotron /*text-center*/ {
+    /*width: 500px;
     height: 500px;
     border: 1px solid red;
-    position: relative
+    position: relative;*/
 }
 
 .LogoImage{
     width:200px;
     height:200px;
-    margin-right:200px;
-    margin-left:100px;
-    float:left;
+    margin-left:50px;
+    /*float:left;*/
     
 }
 
@@ -23,13 +189,6 @@
     margin-top:46px;
     text-align: center;
 }
-
-.containerz {
-    width: 1300px;
-    overflow-y:scroll;
-    height: 530px;
-}
-
 
 .flexBox2{
     display:flex;
@@ -61,7 +220,8 @@ flex_header
 
 #mainbuttons {
     margin-left: 20%;
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .please {
@@ -83,12 +243,74 @@ flex_header
 .indexButtons2 {
     text-align: center;
     font-size: xx-large;
-    width: 410px;
-    height: 100px;
     
 }
-.indexButtons2margin {
+/*.indexButtons2margin {
     margin-left: 360px;
+}*/
+
+/*manageindexButtons {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 100px;
+    margin: 2%;
+}*/
+
+#institute {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 200px;
+    margin: 2%;
+}
+
+#admin {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 200px;
+}
+
+#institutez {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 200px;
+    margin: 2%;
+}
+
+#adminz {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 200px;
+    margin: 2%;
+}
+
+#coursez {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 200px;
+    margin: 2%;
+}
+
+#bookz {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 200px;
+    margin: 2%;
+}
+
+.manageAccountsButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12%;
+    margin-left:2%;
+    margin-right:2%;
 }
 
 
@@ -191,16 +413,40 @@ ul.footer {
     margin-left: 50px;
 }
 
-.boxedViewPost {
 
+.contact_poster {
+    display: flex;
+    flex-direction: column;
     border: 3px solid black;
     margin-bottom: 10px;
-    margin-left: 200px;
-    margin-right: 200px;
+    width: 541px;
+    margin-left: 2%;
+}
+
+.text-right {
+
+    margin-right:2px;
+}
+
+
+
+.boxedViewPost {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    margin-bottom: 10px;
+    width: 541px;
+    margin-right: 2%;
 }
 .flexBox {
     display: flex;
 }
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 .flexBoxCol {
@@ -208,14 +454,62 @@ ul.footer {
     flex-direction: column;
 }
 
+
+
+.flexBox-jumbo-footer {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.flexBoxCol2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*margin-left: 15%;*/
+}
+
+#TextBox1 {
+    width: 250px;
+}
+
+#TextBox2 {
+    margin-bottom:4px;
+}
+
+
+.browseLabelzz {
+    /*margin-right: 2%;*/
+    margin-right: 2px;
+}
+
+
+.browseLabelz {
+    text-align: right;
+    margin-right: 2%;
+}
+
+
+
 .courseDescriptionText {
-    height: 200px;
-    width: 213px;
+    margin-left: 5px;
+}
+
+.browseTextbox {
+    width: 293px;
+}
+
+
+
+
+.SendEmailButton {
+    font-size: 32px;
 }
 
 .CreateAccountButton {
-    margin-top: 220px;
-    margin-left: 190px;
+    margin-top: 170px;
+    margin-left: 77px;
     font-size: 60px;
 }
 
@@ -262,5 +556,56 @@ ul.footer {
     margin-bottom: 10px;
     margin-left: 100px;
     margin-right: 100px;
+}
+
+/* Admin Coursebook Approval.. so bad at css*/
+
+
+
+
+.book-scroll-bar {
+    height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 1951px;
+}
+
+
+.book-table-browse {
+    height: 400px;
+}
+
+.coursebook-pending-list {
+}
+
+#SelectCollegeLabel {
+}
+
+.tahoma{
+    font-family:Tahoma;
+    font-size: 18px;
+}
+
+.rightmarginlogin{
+    margin-right: 10px;
+}
+
+.addremoveuserbox{
+    width:310px;
+}
+
+.comboheight{
+    height:33px;
+}
+
+.organize_page {
+    display: flex;
+    flex-direction:column;
+}
+
+.organize_tableViews {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
 }
 

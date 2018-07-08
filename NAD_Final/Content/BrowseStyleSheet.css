@@ -6,9 +6,10 @@
 }
 
 
-.flex-container {
+.flex-container5 {
     display: flex;
     justify-content: center;
+    margin-left: 15%;
 }
 
 #SelectCollegeLabel {
@@ -24,11 +25,42 @@
 #resultsListbox {
 }
 
+.courseDescriptionText {
+    margin-bottom: 4px;
+}
+
+.table-border {
+    border: 1px solid black;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
+
+.nav-row {
+    display:flex;
+    border: 1px solid black;
+    margin-right: 5px;
+    padding-right: 5px;
+    justify-content: center;
+}
+
+
+.border {
+    border: 1px solid black;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
 .flex-container2 {
     display: flex;
+    flex-wrap: nowrap;
     border: 2px solid black;
 }
 
+.flex-container-columns {
+    display:flex;
+    flex-direction: column;
+}
 
 
 .flex-container3 {

@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ManageAccounts.aspx.cs" Inherits="NAD_Final.ManageAccounts" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/TextbookTrader.Master" AutoEventWireup="true" CodeBehind="ManageAccounts.aspx.cs" Inherits="NAD_Final.ManageAccounts" %>
 
 <%--
 /*
@@ -11,81 +12,26 @@
 */
 --%>
 
+<asp:Content ID="indexHeader" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
 
+<asp:Content ID="adminBrowseTitle" ContentPlaceHolderID="TitleContent" runat="server">
+    <h1>Manage Admins & Institutions</h1>
+</asp:Content>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="AdminButton" runat="server">
+    <asp:Button class="btn btn-info tahoma" ID="Button14" runat="server" Text="Administrate" Visible="false" OnClick="Admin_Click"/>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Manage Accounts</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Content/myCustom.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <form class="form-horizontal" id="form1" runat="server">
-      
-        <div class="jumbotron ">
-            <div class="flexBox2">
-                <div style="flex-grow:1">
-                    <asp:ImageButton class ="LogoImage" ID="ImageButton2" src="Images/ourLogo.jpg" runat="server" OnClick="Logo_Click"/>
-                </div>
-                <div style="flex-grow:8" class ="mainaligncentrediv">
-                    <h1>Manage Accounts</h1>
-                </div>
-                <div style="flex-grow:1">
-                   <asp:ImageButton class ="LogoImage" ID="ImageButton3" Visibile = "False" src="" runat="server" />
-                </div>
+<asp:Content ID="indexBody" ContentPlaceHolderID="MainContent" runat="server">
+      <div class="afterjumbo">
+        <div class="manageAccountsButtons">
+            <div id="institutez">
+                <asp:Button ID="institute" runat="server" Text="Manage Institutions" OnClick="ARInstitution_click" />
             </div>
-            <div class="Logins">
-                
-                <div class="row">
-                    
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/LoginPage.aspx">Login</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="HyperLink2" runat="server">Account</asp:HyperLink>
-                    </div>
-                </div>
+            <div id="adminz">
+                <asp:Button ID="admin" runat="server" Text="Manage Institution Admins" OnClick="ARSysAdmin_Click" />
             </div>
         </div>
-        <div class="afterjumbo">
-            <br/>
-            <br/>
-            <div class="row" id="mainbuttons">
-                <div class="flexBox">
-                        <div>
-                            <asp:Button class="indexButtons2" ID="institute" runat="server" Text="Add/Remove Institution" OnClick="ARInstitution_click" />
-                        </div>
-                
-                        <div>
-                            <asp:Button class="indexButtons2 indexButtons2margin" ID="admin" runat="server" Text="Add/Remove System Admin" OnClick="ARSysAdmin_Click" />
-                        </div>
-                </div>
-            </div>
        </div>
-    </form>
-    <div id="footer">
-         <div class="container text-center">
-          <br/>
-          <br/>
-          <div class="row">
-            <div class="col-sm-4">
-                <asp:HyperLink ID="ContactUsLink" runat="server">Contact Us</asp:HyperLink>
-            </div>
-            <div class="col-sm-4">
-                <asp:HyperLink ID="TermsOfUseLink" runat="server">Terms Of Use</asp:HyperLink>
-            </div>
-            <div class="col-sm-4">
-                <asp:HyperLink ID="PrivacyLink" runat="server">Privacy Policy</asp:HyperLink>
-            </div>
-          </div>
-        </div>
-    </div>
-</body>
-</html>
-
+</asp:Content>

@@ -1,0 +1,541 @@
+﻿html, body, form-horizontal {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    position: relative;
+    /*height: auto !important;
+    height: 100%;*/
+    /* Negative indent footer by it's height */
+    /*margin: 0 auto -60px;*/
+}
+
+/* #push {
+   height: 60px;
+ }*/
+
+.searchButtonBrowse {
+    margin-left: 10px;
+}
+
+#image-data {
+    margin-left:10px;
+    margin-right:10px;
+    padding :10px;
+}
+
+.nav-buttons {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.align-data-buttons {
+
+    display:flex;
+    margin:20px;
+    padding:20px;
+}
+
+.scroll-bar {
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+.result-scroll-bar {
+    height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+.result-table-browse {
+    height: 400px;
+}
+
+.result-table-post {
+    /*height: 200px;*/
+}
+
+
+.align-data {
+    /*float:none;
+    position: relative;
+    text-align:left;
+    margin-left:20px;
+    margin-right:20px;
+    padding-bottom: 10px;
+    padding-top:10px;
+    padding-left:20px;
+    padding-right 20px*/
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.align-data-expire {
+    padding-top: 13px;
+    margin-left:20px;
+    padding-left:20px;
+    /*float:none;
+    position: relative;
+    height: -20px;
+    text-align:left;
+    margin-top: 7px;
+    margin-left:20px;
+    margin-right:20px;
+    padding-bottom: 10px;
+    padding-top:15px;
+    padding-left:20px;
+    padding-right 20px;*/
+}
+
+page_content {
+    margin-bottom: 4%;
+}
+
+.ListViewButton {
+    font-size: large;
+}
+
+.new_footer {
+    height: 60px;
+    background-color: lightgray;
+    /*bottom: 0px;*/
+    /*float:left;
+    width:100%;*/
+    /*position:absolute;*/
+    /*width: 100%;*/
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px
+}
+
+.resultValues {
+    margin: 10px;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: lightgray;
+    height: 320px;
+}
+
+.center_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flexBox-stretch {
+    display: flex;
+    align-items: stretch;
+}
+
+
+
+.pagetitle {
+    /*justify-content: center;*/
+    text-align:center;
+    flex-grow:1;
+    margin-top: 20%;
+    margin-right: 15%;
+    /*margin-right: 5%;*/
+}
+
+
+.jumbotron /*text-center*/ {
+    /*width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    position: relative;*/
+}
+
+.LogoImage{
+    width:200px;
+    height:200px;
+    margin-left:50px;
+    /*float:left;*/
+    
+}
+
+.mainaligncentrediv 
+{
+    margin-top:46px;
+    text-align: center;
+}
+
+.flexBox2{
+    display:flex;
+    align-items:stretch;
+}
+
+flex_header 
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.Logins {
+    position: inherit;
+    float: right;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.row {
+    text-align: center;
+    vertical-align:central;
+}
+
+#mainbuttons {
+    margin-left: 20%;
+    margin-top: 5%;
+     margin-bottom: 5%;
+}
+
+.please {
+    text-align: center;
+} 
+
+#searchTextbox {
+    text-align: center;
+    margin-right: 10px;
+    width: 305px;
+}
+.indexButtons {
+    text-align: center;
+    font-size: xx-large;
+    width: 200px;
+    height: 100px;
+}
+
+.indexButtons2 {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 100px;
+    
+}
+.indexButtons2margin {
+    margin-left: 360px;
+}
+
+
+ul.footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#footer {
+    vertical-align: middle;
+    bottom: 0px;
+    height: 10%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    background-color: whitesmoke; 
+}
+
+/*LOGIN*/
+.wrapper {
+    text-align: center;
+}
+
+.LoginBorder {
+    margin-top: 10%;
+    height: 320px;
+    width: 520px;
+    border: 3px solid black;
+    text-align: center;
+    display: inline-block;
+}
+
+.LoginBox {
+    /*margin-top:10%;*/
+    padding-left: 2%;
+    padding-right: 1%;
+    height: 300px;
+    width: 500px;
+    display: inline-block;
+}
+
+.LoginLabel {
+    float: left;
+    /*clear: none;*/
+    vertical-align: text-top;
+    
+}
+
+.buttonResize {
+    margin-top: 2%;
+
+    font-size: xx-large;
+    float: right;
+    vertical-align:bottom;
+}
+
+.returnNormal {
+    margin-top:10%;
+    float:left;
+    clear:none;
+}
+
+#LoginSubtitle {
+    margin-left: 20px;
+}
+
+.boxed {
+    border: 3px solid black;
+    margin-bottom: 10px;
+}
+
+.boxedLogin {
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-left:300px;
+    margin-right:300px;
+}
+
+.boxedReset {
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-left:20px;
+    margin-right:20px;
+    width: 70%;
+}
+
+.boxedRegister {
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.registerButton {
+    font-size: 24px;
+}
+
+.registerFont {
+    font-size: 20px;
+}
+
+.leftspace
+{
+    margin-left:10px;
+}
+
+.leftmarginView {
+    margin-left: 50px;
+}
+
+
+.contact_poster {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    margin-bottom: 10px;
+    width: 541px;
+    margin-left: 2%;
+}
+
+.text-right {
+
+    margin-right:2px;
+}
+
+
+
+.boxedViewPost {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    margin-bottom: 10px;
+    width: 541px;
+    margin-right: 2%;
+}
+.flexBox {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.flexBoxCol {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.flexBox-jumbo-footer {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.flexBoxCol2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*margin-left: 15%;*/
+}
+
+#TextBox1 {
+    width: 250px;
+}
+
+#TextBox2 {
+    margin-bottom:4px;
+}
+
+
+.browseLabelzz {
+    /*margin-right: 2%;*/
+    margin-right: 2px;
+}
+
+
+.browseLabelz {
+    text-align: right;
+    margin-right: 2%;
+}
+
+
+
+.courseDescriptionText {
+    margin-left: 5px;
+}
+
+.browseTextbox {
+    width: 293px;
+}
+
+
+
+
+.SendEmailButton {
+    font-size: 32px;
+}
+
+.CreateAccountButton {
+    margin-top: 170px;
+    margin-left: 77px;
+    font-size: 60px;
+}
+
+.addpostButton {
+    font-size: 60px;
+    margin-left: 271px;
+}
+
+.editRemoveButton {
+    font-size: 20px;
+    height: 30px;
+}
+
+.RemoveButton {
+    margin-right: 25px;
+}
+
+.inbetween {
+    display:flex;
+}
+
+.spaceonbothsides{
+    margin-left:25px;
+    margin-right:25px;
+}
+
+.FAQQuestion {
+    margin-left: 15px;
+    font-size: 20px;
+    font-family:Tahoma;
+    font-style:italic;
+}
+
+.FAQAnswer {
+    margin-left: 15px;
+    margin-right:15px;
+    font-size: 20px;
+    font-family: Tahoma;
+    font-style: italic;
+}
+
+.boxedFAQ {
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Admin Coursebook Approval.. so bad at css*/
+
+
+
+
+.book-scroll-bar {
+    height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 1951px;
+}
+
+
+.book-table-browse {
+    height: 400px;
+}
+
+.coursebook-pending-list {
+}
+
+#SelectCollegeLabel {
+    text-align: left;
+}
+
+.tahoma{
+    font-family:Tahoma;
+    font-size: 18px;
+}
+
+.rightmarginlogin{
+    margin-right: 10px;
+}
+
+.addremoveuserbox{
+    width:310px;
+}
+
+.comboheight{
+    height:33px;
+}
+
+.organize_page {
+    display: flex;
+    flex-direction:column;
+}
+
+.organize_tableViews {
+    display:flex;
+    margin: 2%;
+}

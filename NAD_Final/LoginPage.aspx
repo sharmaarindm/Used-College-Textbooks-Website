@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="NAD_Final.LoginPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TextbookTrader.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="NAD_Final.LoginPage" %>
 
 <%--
 /*
@@ -11,78 +11,40 @@
 */
 --%>
 
+<asp:Content ID="indexHeader" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
 
-<!DOCTYPE html>
+<asp:Content ID="adminBrowseTitle" ContentPlaceHolderID="TitleContent" runat="server">
+    <h1>Login</h1>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Login Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Content/myCustom.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <form id="form1" runat="server">
-      <div class="jumbotron ">
-            <div class="flexBox2">
-                <div style="flex-grow:1">
-                    <asp:ImageButton class ="LogoImage" ID="ImageButton1" src="Images/ourLogo.jpg" runat="server" OnClick="Logo_Click"/>
-                </div>
-                <div style="flex-grow:8" class ="mainaligncentrediv">
-                    <h1>Login To Your Account</h1>
-                </div>
-                <div style="flex-grow:1">
-                   <asp:ImageButton class ="LogoImage" ID="ImageButton2" Visibile = "False" src="" runat="server" />
-                </div>
-            </div>
-            <div class="Logins">
-                
-                <div class="row">
-                    
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/LoginPage.aspx">Login</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="AccountHyperLink" runat="server">Account</asp:HyperLink>
-                    </div>
-                </div>
-            </div>
-        </div>
-   
-        <div class="container">
-      
+<asp:Content ID="admin" ContentPlaceHolderID="AdminButton" runat="server">
+    <asp:Button class="btn btn-info tahoma" ID="Button14" runat="server" Text="Administrate" Visible="false" OnClick="Admin_Click"/>
+</asp:Content>
+
+<asp:Content ID="indexBody" ContentPlaceHolderID="MainContent" runat="server">
+    <script type="text/javascript">
+         function Username_ClientClicked()
+          {
+              document.getElementById("<%=UserName.ClientID%>").value = "";
+              document.getElementById("<%=UserName.ClientID%>").style.color = "black";
+         }
+         function Password_ClientClicked() {
+             document.getElementById("<%=password.ClientID%>").value = "";
+             document.getElementById("<%=password.ClientID%>").style.color = "black";
+        }
+        </script>
+<div class="container">
+            <div class="text-center"><h3><asp:Label ID="failedLogin" runat="server" Visible="false"></asp:Label></h3></div>
             <div class ="boxedLogin">
                 <div>
                       <pre class="registerButton">Sign In                      <asp:Button ID="Register" runat="server" Text="Register" OnClick="Register_Click" /></pre>
                      
-                      <pre class="registerFont">  Username <asp:TextBox ID="UserName" runat="server">Admin</asp:TextBox></pre>
-                      <pre class="registerFont">  Password <asp:TextBox ID="password" runat="server">********</asp:TextBox><asp:Button ID="forgot" runat="server" Text="Forgot?"></asp:Button></pre>
-                      <pre><asp:CheckBox ID="CheckBox1" runat="server"></asp:CheckBox>        Remember Me                                 <asp:Button class="registerButton" ID="login" runat="server" Text="   Login   " OnClick="Login_Click"></asp:Button></pre>
+                      <pre class="registerFont">  Username <asp:TextBox ID="UserName" runat="server" Onclick ="Username_ClientClicked()"></asp:TextBox></pre>
+                      <pre class="registerFont">  Password <asp:TextBox ID="password" runat="server" TextMode="Password" Onclick ="Password_ClientClicked()"></asp:TextBox><asp:Button ID="forgot" runat="server" Text="Forgot?" Onclick="Forgot_click"></asp:Button></pre>
+                      <pre><div class="text-center"><asp:Button class="registerButton" ID="login" runat="server" Text="   Login   " OnClick="Login_Click"></asp:Button></div></pre>
                 </div>
             </div>
         </div>
+</asp:Content>
 
-
-        <div id="footer">
-            <div class="container text-center">
-                <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="ContactUsLink" runat="server">Contact Us</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="TermsOfUseLink" runat="server">Terms Of Use</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="PrivacyLink" runat="server">Privacy Policy</asp:HyperLink>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</body>
-</html>

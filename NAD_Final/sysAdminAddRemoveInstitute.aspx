@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="sysAdminAddRemoveInstitute.aspx.cs" Inherits="NAD_Final.sysAdminAddRemoveInstitute" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/TextbookTrader.Master" AutoEventWireup="true" CodeBehind="sysAdminAddRemoveInstitute.aspx.cs" Inherits="NAD_Final.sysAdminAddRemoveInstitute" %>
 
 
 <%--
@@ -12,69 +13,72 @@
 */
 --%>
 
+<asp:Content ID="indexHeader" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
 
-<!DOCTYPE html>
+<asp:Content ID="adminAddRemoveInstitutionTitle" ContentPlaceHolderID="TitleContent" runat="server">
+    <h1>Add/Remove Institution</h1>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>ADD/REMOVE Institute</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Content/myCustom.css">
-    <link rel="stylesheet" href="Content/BrowseStyleSheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <form id="form1" runat="server">
-   
-         <div class="jumbotron ">
-            <div class="flexBox2">
-                <div style="flex-grow:1">
-                    <asp:ImageButton class ="LogoImage" ID="ImageButton1" src="Images/ourLogo.jpg" runat="server" OnClick="Logo_Click"/>
-                </div>
-                <div style="flex-grow:8" class ="mainaligncentrediv">
-                    <h1>ADD/REMOVE Institute</h1>
-                </div>
-                <div style="flex-grow:1">
-                   <asp:ImageButton class ="LogoImage" ID="ImageButton2" Visibile = "False" src="" runat="server" />
-                </div>
-            </div>
-            <div class="Logins">
-                
-                <div class="row">
-                    
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/LoginPage.aspx">Login</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="AccountHyperLink" runat="server">Account</asp:HyperLink>
-                    </div>
-                </div>
-            </div>
-        </div>
+<asp:Content ID="admin" ContentPlaceHolderID="AdminButton" runat="server">
+    <asp:Button class="btn btn-info tahoma" ID="Button14" runat="server" Text="Administrate" Visible="false" OnClick="Admin_Click"/>
+</asp:Content>
 
-        <div class="container">
+<asp:Content ID="indexBody" ContentPlaceHolderID="MainContent" runat="server">
 
+    <script type="text/javascript">
+          function newTitle_ClientClicked()
+          {
+              document.getElementById("<%=Institute.ClientID%>").value = "";
+              document.getElementById("<%=Institute.ClientID%>").style.color = "black";
+        }
+    </script>
+  <div class="container">
             <div class ="flexBox">
-                <div>
+                <%--<div class="text-center" >--%>
+                   <%-- <asp:Label  ID="alerts" runat="server" Text=""></asp:Label>--%>
+                <div style="margin-right:5px">
                     <div class ="boxedRegister">
                         <div>
                            
-                            <pre>       <h1>Add New Institute</h1></pre>
+                            <pre>       <h1><asp:Label ID="EditInstName" runat="server" Text="Add New Institute"></asp:Label></h1></pre>
                             
                         </div>
                         <div>
-                            <pre class="registerFont">  Institute name                 <asp:TextBox ID="Institute" runat="server"></asp:TextBox></pre>
-                            <pre class="registerFont">  Username                       <asp:TextBox ID="Username" runat="server"></asp:TextBox></pre>
-                            <pre class="registerFont">  Password                       <asp:TextBox ID="Password" runat="server"></asp:TextBox></pre>
+                            <pre class="registerFont">    <asp:Label ID="NewInstName" runat="server" Text="Institute name"></asp:Label>            <asp:TextBox ID="Institute" runat="server" OnClick="newTitle_ClientClicked()"></asp:TextBox></pre>
+                            
                         </div>
                     </div>
-                    <asp:Button class="addpostButton" ID="AddInstituteButton" runat="server" Text="Add Institute" />
+                    <div style="margin-top:20px; margin-right:15px">
+                        <asp:Button class="addpostButton" ID="AddInstitute" runat="server" Text="Add Institute" OnClick="AddInstituteButton_Click"/>
+                    </div>
                 </div>
-
+               <%-- asdadasdasdas--%>
                 <div>
+                    <asp:ListView ID="instituteListView" runat="server" OnSelectedIndexChanged="instituteListView_SelectedIndexChanged" AutoPostBack="True" ShowItemToolTips ="True">
+                        <LayoutTemplate>
+                            <div class="result-scroll-bar">
+                               <%-- <table style="width:auto">--%>
+                                <table class="border">
+                                    <asp:PlaceHolder runat="server" ID="itemPlaceholder"></asp:PlaceHolder>              
+                               <%-- </Table>--%>
+                                </table>
+                            </div>
+                        </LayoutTemplate>
+                        <ItemTemplate>
+                            <tr class="border">
+                                <td class="align-data text-nowrap"><h3>Title: <%#Eval("_institution_name") %></h3></td>
+                                <td class="align-data-buttons">
+                                     <asp:Button class="ListViewButton" ID="editInstitutebutton" runat="server" Text="Edit" OnClick="editInstitute_Click"/>
+                                     <asp:Button class="ListViewButton" ID="deleteInstituteButton" runat="server" Text="Delete" OnClick="DeleteInstitute_Click"/>
+                                </td>     
+                            </tr>
+                        </ItemTemplate>
+                    </asp:ListView>
+                 </div>
+
+
+<%--                <div>
                 <div class="flex-container3">
                 <div id="resultsListbox">
                     <div class="flex-container2">
@@ -167,36 +171,12 @@
                    
                                     
                         </div>
-                
                      </div>
-                    
                     </div>
                     <div>
-                        
-                        <pre class="registerFont">                 <asp:Button class="btn btn-primary" ID="back" runat="server" Text="<"></asp:Button> <asp:Label class="label label-info registerFont" ID="currentPage" runat="server" Text="1"></asp:Label> <asp:Button class="btn btn-primary" ID="next" runat="server" Text=">"></asp:Button></pre>
+                    </div>
+                </div>--%>
 
-                    </div>
-                </div>
-            </div>
+           <%-- </div>--%>
         </div>
-
-        <div id="footer">
-            <div class="container text-center">
-                <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="ContactUsLink" runat="server">Contact Us</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="TermsOfUseLink" runat="server">Terms Of Use</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="PrivacyLink" runat="server">Privacy Policy</asp:HyperLink>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</body>
-</html>
+</asp:Content>

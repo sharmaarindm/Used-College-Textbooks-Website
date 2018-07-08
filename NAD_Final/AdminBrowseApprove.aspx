@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminBrowseApprove.aspx.cs" Inherits="NAD_Final.AdminBrowseApprove" %>
-
-<%--
+﻿<%--
 /*
 * FILE : AdminBrowseApprove.aspx
 * PROJECT : NAD - Project proof of concept
@@ -11,50 +9,45 @@
 * request by the users creating posts in order to sell boooks.
 */
 --%>
+<%@ Page Title="" Language="C#" MasterPageFile="~/TextbookTrader.Master" AutoEventWireup="true" CodeBehind="AdminBrowseApprove.aspx.cs" Inherits="NAD_Final.AdminBrowseApprove" %>
 
-<!DOCTYPE html>
+<asp:Content ID="indexHeader" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Login Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Content/myCustom.css">
-    <link rel="stylesheet" href="Content/BrowseStyleSheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div class="jumbotron">
-            <h1 class="leftspace">  Post Your Textbooks</h1>
-        </div>
+<asp:Content ID="adminBrowseTitle" ContentPlaceHolderID="TitleContent" runat="server">
+    <h1>Approve Textbooks</h1>
+</asp:Content>
 
-        <div class="container">
+<asp:Content ID="admin" ContentPlaceHolderID="AdminButton" runat="server">
+    <asp:Button class="btn btn-info tahoma" ID="Button14" runat="server" Text="Administrate" Visible="false" OnClick="Admin_Click"/>
+</asp:Content>
+
+
+<asp:Content ID="indexBody" ContentPlaceHolderID="MainContent" runat="server">
+            <<div class="container">
 
             <div class ="flexBox">
                 <div>
                     <div class ="boxedRegister">
                         <div class ="flexBox">
                             <div>
-                                <asp:Image ID="Image1" runat="server" Height="124px" Width="126px" />
+                                <asp:Image ID="Image2" runat="server" Height="124px" Width="126px" />
                             </div>
                             <div>
-                                <pre class="registerFont">  Title     <asp:TextBox ID="Title" runat="server"></asp:TextBox></pre>
-                                <pre class="registerFont">  Author    <asp:TextBox ID="Author" runat="server"></asp:TextBox></pre>
+                                <pre class="registerFont">  Title     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></pre>
+                                <pre class="registerFont">  Author    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></pre>
                             </div>
                             
                         </div>
                         <div>
-                            <pre class="registerFont">  ISBN                 <asp:TextBox ID="ISBN" runat="server"></asp:TextBox></pre>
-                            <pre class="registerFont">  Edition              <asp:TextBox ID="Edition" runat="server"></asp:TextBox></pre>
-                            <pre class="registerFont">  Publisher            <asp:TextBox ID="Publisher" runat="server"></asp:TextBox></pre>
-                            <pre class="registerFont">  Year Of Publication  <asp:TextBox ID="YearOfPublication" runat="server"></asp:TextBox></pre>
-                            <pre class="registerFont">  Add course           <asp:DropDownList ID="AddCourse" runat="server"></asp:DropDownList></pre>
+                            <pre class="registerFont">  ISBN                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></pre>
+                            <pre class="registerFont">  Edition              <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></pre>
+                            <pre class="registerFont">  Publisher            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></pre>
+                            <pre class="registerFont">  Year Of Publication  <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox></pre>
+                            <pre class="registerFont">  Add course           <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList></pre>
                         </div>
                     </div>
-                    <asp:Button class="addpostButton" ID="AddPost" runat="server" Text="Add Post" />
+                    <asp:Button class="addpostButton" ID="Button1" runat="server" Text="Add Post" />
                 </div>
 
                 <div>
@@ -68,17 +61,17 @@
                                 </div>
                                 <div class="spaceonbothsides">
                               
-                                    <h3><asp:Label ID="Title1" runat="server" Text="Title"></asp:Label></h3>
+                                    <h3><asp:Label ID="Label1" runat="server" Text="Title"></asp:Label></h3>
                    
                                 </div>
                                 <div class="spaceonbothsides">
                                     <br />
                                     <br />
-                                    <asp:Label ID="expireDate1" runat="server" Text="Expires: 5/26/2017"></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Text="Expires: 5/26/2017"></asp:Label>
                                 </div>
                                 <div>
                                     <br />
-                                    <div><asp:Button class="editRemoveButton" ID="Edit1" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Remove1" runat="server" Text="Remove" /></div>
+                                    <div><asp:Button class="editRemoveButton" ID="Button2" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Button3" runat="server" Text="Remove" /></div>
 
                                 </div>
                             </div>
@@ -93,17 +86,17 @@
                                 </div>
                                 <div class="spaceonbothsides">
                               
-                                    <h3><asp:Label ID="Title2" runat="server" Text="Title"></asp:Label></h3>
+                                    <h3><asp:Label ID="Label3" runat="server" Text="Title"></asp:Label></h3>
                    
                                 </div>
                                 <div class="spaceonbothsides">
                                     <br />
                                     <br />
-                                    <asp:Label ID="expireDate2" runat="server" Text="Expires: 5/26/2017"></asp:Label>
+                                    <asp:Label ID="Label4" runat="server" Text="Expires: 5/26/2017"></asp:Label>
                                 </div>
                                 <div>
                                     <br />
-                                    <div><asp:Button class="editRemoveButton" ID="Edit2" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Remove2" runat="server" Text="Remove" /></div>
+                                    <div><asp:Button class="editRemoveButton" ID="Button4" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Button5" runat="server" Text="Remove" /></div>
 
                                 </div>
                             </div>
@@ -118,17 +111,17 @@
                                 </div>
                                 <div class="spaceonbothsides">
                               
-                                    <h3><asp:Label ID="Title3" runat="server" Text="Title"></asp:Label></h3>
+                                    <h3><asp:Label ID="Label5" runat="server" Text="Title"></asp:Label></h3>
                    
                                 </div>
                                 <div class="spaceonbothsides">
                                     <br />
                                     <br />
-                                    <asp:Label ID="expireDate3" runat="server" Text="Expires: 5/26/2017"></asp:Label>
+                                    <asp:Label ID="Label6" runat="server" Text="Expires: 5/26/2017"></asp:Label>
                                 </div>
                                 <div>
                                     <br />
-                                    <div><asp:Button class="editRemoveButton" ID="Edit3" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Remove3" runat="server" Text="Remove" /></div>
+                                    <div><asp:Button class="editRemoveButton" ID="Button6" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Button7" runat="server" Text="Remove" /></div>
 
                                 </div>
                             </div>
@@ -143,17 +136,17 @@
                                 </div>
                                 <div class="spaceonbothsides">
                               
-                                    <h3><asp:Label ID="Title4" runat="server" Text="Title"></asp:Label></h3>
+                                    <h3><asp:Label ID="Label7" runat="server" Text="Title"></asp:Label></h3>
                    
                                 </div>
                                 <div class="spaceonbothsides">
                                     <br />
                                     <br />
-                                    <asp:Label ID="expireDate4" runat="server" Text="Expires: 5/26/2017"></asp:Label>
+                                    <asp:Label ID="Label8" runat="server" Text="Expires: 5/26/2017"></asp:Label>
                                 </div>
                                 <div>
                                     <br />
-                                    <div><asp:Button class="editRemoveButton" ID="Edit4" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Remove4" runat="server" Text="Remove" /></div>
+                                    <div><asp:Button class="editRemoveButton" ID="Button8" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Button9" runat="server" Text="Remove" /></div>
 
                                 </div>
                             </div>
@@ -168,17 +161,17 @@
                                 </div>
                                 <div class="spaceonbothsides">
                               
-                                    <h3><asp:Label ID="Title5" runat="server" Text="Title"></asp:Label></h3>
+                                    <h3><asp:Label ID="Label9" runat="server" Text="Title"></asp:Label></h3>
                    
                                 </div>
                                 <div class="spaceonbothsides">
                                     <br />
                                     <br />
-                                    <asp:Label ID="expireDate5" runat="server" Text="Expires: 5/26/2017"></asp:Label>
+                                    <asp:Label ID="Label10" runat="server" Text="Expires: 5/26/2017"></asp:Label>
                                 </div>
                                 <div>
                                     <br />
-                                    <div><asp:Button class="editRemoveButton" ID="Edit5" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Remove5" runat="server" Text="Remove" /></div>
+                                    <div><asp:Button class="editRemoveButton" ID="Button10" runat="server" Text="Edit" /><asp:Button class="editRemoveButton RemoveButton" ID="Button11" runat="server" Text="Remove" /></div>
 
                                 </div>
                             </div>
@@ -190,30 +183,14 @@
                     </div>
                     <div>
                         
-                        <pre class="registerFont">                 <asp:Button class="btn btn-primary" ID="back" runat="server" Text="<"></asp:Button> <asp:Label class="label label-info registerFont" ID="currentPage" runat="server" Text="1"></asp:Label> <asp:Button class="btn btn-primary" ID="next" runat="server" Text=">"></asp:Button></pre>
+                        <pre class="registerFont">                 <asp:Button class="btn btn-primary" ID="Button12" runat="server" Text="<"></asp:Button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <asp:Label class="label label-info registerFont" ID="Label11" runat="server" Text="1"></asp:Label> <asp:Button class="btn btn-primary" ID="Button13" runat="server" Text=">"></asp:Button></pre>
 
                     </div>
                 </div>
             </div>
         </div>
+</asp:Content>
 
-        <div id="footer">
-            <div class="container text-center">
-                <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="ContactUsLink" runat="server">Contact Us</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="TermsOfUseLink" runat="server">Terms Of Use</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="PrivacyLink" runat="server">Privacy Policy</asp:HyperLink>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</body>
-</html>
+
+
+

@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewPost.aspx.cs" Inherits="NAD_Final.ViewPost" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/TextbookTrader.Master" AutoEventWireup="true" CodeBehind="ViewPost.aspx.cs" Inherits="NAD_Final.ViewPost" %>
 
 <%--
 /*
@@ -11,100 +12,64 @@
 */
 --%>
 
+<asp:Content ID="indexHeader" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
 
-<!DOCTYPE html>
+<asp:Content ID="adminBrowseTitle" ContentPlaceHolderID="TitleContent" runat="server">
+    <h1><asp:Label ID ="ViewPostTitle" runat="server"></asp:Label></h1>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Login Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Content/myCustom.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <form id="form1" runat="server">
-      
+<asp:Content ID="admin" ContentPlaceHolderID="AdminButton" runat="server">
+    <asp:Button class="btn btn-info tahoma" ID="Button14" runat="server" Text="Administrate" Visible="false" OnClick="Admin_Click"/>
+</asp:Content>
 
-
-        <div class="jumbotron ">
-            <div class="flexBox2">
-                <div style="flex-grow:1">
-                    <asp:ImageButton class ="LogoImage" ID="ImageButton1" src="Images/ourLogo.jpg" runat="server" OnClick="Logo_Click"/>
-                </div>
-                <div style="flex-grow:8" class ="mainaligncentrediv">
-                    <h1><asp:Label ID="PostName" runat="server" Text="Bromans Post 1"></asp:Label></h1>
-                </div>
-                <div style="flex-grow:1">
-                   <asp:ImageButton class ="LogoImage" ID="ImageButton2" Visibile = "False" src="" runat="server" />
-                </div>
-            </div>
-            <div class="Logins">
-                
-                <div class="row">
-                    
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/LoginPage.aspx">Login</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="AccountHyperLink" runat="server">Account</asp:HyperLink>
-                    </div>
-                </div>
-            </div>
-        </div>
-      
-         <div class="container">
+<asp:Content ID="indexBody" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="flex-container5">
       
             <div class="boxedViewPost">
-            <div class ="flexBox">
+                <div><h3 class="text-center"><b>Student Post</b></h3></div>
+                <div class ="flexBox">
+                    <div>
+                        <pre><asp:Image CssClass="imageViewPost" ID="PostImage" runat="server" Height="233px" Width="181px" src="Images/ourLogo.jpg"/></pre>
+                    </div>
+                    <div style="flex-grow: 2">
+                        <pre class="registerFont"> Course Descriptions</pre>
+                        <asp:TextBox class="courseDescriptionText" ID="TextBox5" runat="server" Height="191px" Width="323px" TextMode="MultiLine" readonly="true"></asp:TextBox>
+                    </div>
+                </div>        
                 <div>
-                    <pre><asp:Image CssClass="imageViewPost" ID="PostImage" runat="server" Height="233px" Width="181px" /></pre>
-                </div>
-                <div class="leftmarginView">
-                    <pre class="registerFont">  Post Owner   <asp:TextBox ID="postOwner" runat="server"></asp:TextBox></pre>
-                    <pre class="registerFont">  Price        <asp:TextBox ID="price" runat="server"></asp:TextBox></pre>
-                    <pre class="registerFont">  Title        <asp:TextBox ID="Title" runat="server"></asp:TextBox></pre>
-                    <pre class="registerFont">  Author       <asp:TextBox ID="Author" runat="server"></asp:TextBox></pre>
-
-                </div>
-                
-            </div>
-                <div>
-                    <pre class="registerFont">  ISBN                  <asp:TextBox ID="ISBN" runat="server"></asp:TextBox> Course Description</pre>
                     <div class ="flexBox">
                         <div>
-                        <pre class="registerFont">  Edition               <asp:TextBox ID="Edition" runat="server"></asp:TextBox></pre>
-                        <pre class="registerFont">  Publisher             <asp:TextBox ID="Publisher" runat="server"></asp:TextBox></pre>
-                        <pre class="registerFont">  Year Of Publication   <asp:TextBox ID="YearOfPublication" runat="server"></asp:TextBox></pre>
-                        </div>
-                        <div>
-                            <asp:TextBox class="courseDescriptionText" ID="CourseDescription" runat="server"></asp:TextBox>
+                        <pre class="registerFont">  Post Owner            <asp:TextBox ID="postOwner" runat="server" readonly="true"></asp:TextBox></pre>
+                        <pre class="registerFont">  Price                 <asp:TextBox ID="price" runat="server" readonly="true"></asp:TextBox></pre>
+                        <pre class="registerFont">  Title                 <asp:TextBox ID="newTitle" runat="server" readonly="true"></asp:TextBox></pre>
+                        <pre class="registerFont">  Author                <asp:TextBox ID="Author" runat="server" readonly="true"></asp:TextBox></pre>
+                        <pre class="registerFont">  ISBN                  <asp:TextBox ID="ISBN" runat="server" readonly="true"></asp:TextBox> </pre>
+                        <pre class="registerFont">  Edition               <asp:TextBox ID="Edition" runat="server" readonly="true"></asp:TextBox></pre>
+                        <pre class="registerFont">  Publisher             <asp:TextBox ID="Publisher" runat="server" readonly="true"></asp:TextBox></pre>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="flex-column">
+                <div class="contact_poster">
+                    <div><h3 class="text-center"><b>Contact the Poster</b></h3></div> <!-- div label-->
+                    <div>
+                         <div class ="flexBox">
+                             <pre class="registerFont">  Provide Your Email     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></pre>
 
-        <div id="footer">
-            <div class="container text-center">
-                <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="ContactUsLink" runat="server">Contact Us</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="TermsOfUseLink" runat="server">Terms Of Use</asp:HyperLink>
-                    </div>
-                    <div class="col-sm-4">
-                        <asp:HyperLink ID="PrivacyLink" runat="server">Privacy Policy</asp:HyperLink>
-                    </div>
+                         </div>
+                    </div> <!-- div your email textbox -->
+                    <div> <pre class="registerFont text-center">Write A Message</div>
+                    <div>
+                        <asp:TextBox class="courseDescriptionText" ID="TextBox2" runat="server" Height="191px" Width="526px" TextMode="MultiLine"></asp:TextBox>
+                    </div><!-- div email body message textbox -->
                 </div>
-            </div>
+                <div>
+                    <div class ="text-right"><asp:Button class="SendEmailButton" ID="Button1" runat="server" Text="Send Message" OnClick="sendMail"></asp:Button></div>
+                </div> <!-- div send email button  -->
+             </div>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+
 
