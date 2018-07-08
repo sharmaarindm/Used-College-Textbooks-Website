@@ -1,0 +1,266 @@
+﻿html, body, form-horizontal {
+    height: 100%
+}
+
+.jumbotron text-center {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    position: relative
+}
+
+.LogoImage{
+    width:200px;
+    height:200px;
+    margin-right:200px;
+    margin-left:100px;
+    float:left;
+    
+}
+
+.mainaligncentrediv 
+{
+    margin-top:46px;
+    text-align: center;
+}
+
+.containerz {
+    width: 1300px;
+    overflow-y:scroll;
+    height: 530px;
+}
+
+
+.flexBox2{
+    display:flex;
+    align-items:stretch;
+}
+
+flex_header 
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.Logins {
+    position: inherit;
+    float: right;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.row {
+    text-align: center;
+    vertical-align:central;
+}
+
+#mainbuttons {
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.please {
+    text-align: center;
+} 
+
+#searchTextbox {
+    text-align: center;
+    margin-right: 10px;
+    width: 305px;
+}
+.indexButtons {
+    text-align: center;
+    font-size: xx-large;
+    width: 200px;
+    height: 100px;
+}
+
+.indexButtons2 {
+    text-align: center;
+    font-size: xx-large;
+    width: 410px;
+    height: 100px;
+    
+}
+.indexButtons2margin {
+    margin-left: 360px;
+}
+
+
+ul.footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#footer {
+    vertical-align: middle;
+    bottom: 0px;
+    height: 10%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    background-color: whitesmoke; 
+}
+
+/*LOGIN*/
+.wrapper {
+    text-align: center;
+}
+
+.LoginBorder {
+    margin-top: 10%;
+    height: 320px;
+    width: 520px;
+    border: 3px solid black;
+    text-align: center;
+    display: inline-block;
+}
+
+.LoginBox {
+    /*margin-top:10%;*/
+    padding-left: 2%;
+    padding-right: 1%;
+    height: 300px;
+    width: 500px;
+    display: inline-block;
+}
+
+.LoginLabel {
+    float: left;
+    /*clear: none;*/
+    vertical-align: text-top;
+    
+}
+
+.buttonResize {
+    margin-top: 2%;
+
+    font-size: xx-large;
+    float: right;
+    vertical-align:bottom;
+}
+
+.returnNormal {
+    margin-top:10%;
+    float:left;
+    clear:none;
+}
+
+#LoginSubtitle {
+    margin-left: 20px;
+}
+
+.boxed {
+    border: 3px solid black;
+    margin-bottom: 10px;
+}
+
+.boxedLogin {
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-left:300px;
+    margin-right:300px;
+}
+
+.boxedRegister {
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.registerButton {
+    font-size: 24px;
+}
+
+.registerFont {
+    font-size: 20px;
+}
+
+.leftspace
+{
+    margin-left:10px;
+}
+
+.leftmarginView {
+    margin-left: 50px;
+}
+
+.boxedViewPost {
+
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.flexBox {
+    display: flex;
+}
+
+
+.flexBoxCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.courseDescriptionText {
+    height: 200px;
+    width: 213px;
+}
+
+.CreateAccountButton {
+    margin-top: 220px;
+    margin-left: 190px;
+    font-size: 60px;
+}
+
+.addpostButton {
+    font-size: 60px;
+    margin-left: 271px;
+}
+
+.editRemoveButton {
+    font-size: 20px;
+    height: 30px;
+}
+
+.RemoveButton {
+    margin-right: 25px;
+}
+
+.inbetween {
+    display:flex;
+}
+
+.spaceonbothsides{
+    margin-left:25px;
+    margin-right:25px;
+}
+
+.FAQQuestion {
+    margin-left: 15px;
+    font-size: 20px;
+    font-family:Tahoma;
+    font-style:italic;
+}
+
+.FAQAnswer {
+    margin-left: 15px;
+    margin-right:15px;
+    font-size: 20px;
+    font-family: Tahoma;
+    font-style: italic;
+}
+
+.boxedFAQ {
+    border: 3px solid black;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+

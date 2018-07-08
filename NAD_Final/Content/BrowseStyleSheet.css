@@ -1,0 +1,52 @@
+﻿body {
+}
+
+#LoginSubtitle {
+    margin-left: 20px;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+#SelectCollegeLabel {
+}
+
+#BrowseLabel {
+}
+
+#CollegeDropdownP {
+    width: 300px;
+}
+
+#resultsListbox {
+}
+
+.flex-container2 {
+    display: flex;
+    border: 2px solid black;
+}
+
+
+
+.flex-container3 {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+
+#bookImage {
+    height: 80px;
+    width: 100px;
+}
+
+#bookImage2 {
+    height: 87px;
+    width: 87px;
+}
+
+.fieldheight {
+    height: 87px;
+}
